@@ -1,0 +1,14 @@
+<h1>Mia Table Angular</h1>
+
+<div id="buttonsWrapper">
+
+    <mia-edit-columns [config]="tableConfig" [miaTable]="tableComp">
+        <button>Edit Columns</button>
+    </mia-edit-columns>
+
+    <button>
+        New
+    </button>
+</div>
+
+<mia-table #tableComp [config]="tableConfig"></mia-table>

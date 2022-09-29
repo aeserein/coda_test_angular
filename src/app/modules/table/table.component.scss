@@ -1,0 +1,15 @@
+#buttonsWrapper {
+    display: flex;
+}
+button {
+    width: 115px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    cursor: pointer;
+    background-color: var(--main);
+    margin-right: 10px;
+    color: white;
+    font-weight: 600;
+}

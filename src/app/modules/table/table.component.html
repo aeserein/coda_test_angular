@@ -1,14 +1,18 @@
-<h1>Mia Table Angular</h1>
-
-<div id="buttonsWrapper">
-
-    <mia-edit-columns [config]="tableConfig" [miaTable]="tableComp">
-        <button>Edit Columns</button>
-    </mia-edit-columns>
-
-    <button>
-        New
-    </button>
+<div class="container">
+    <header>
+        <h1>Mis clientes</h1>
+    </header>
+    
+    <div id="buttonsWrapper">
+    
+        <mia-edit-columns [config]="tableConfig" [miaTable]="tableComp">
+            <button>Edit Columns</button>
+        </mia-edit-columns>
+    
+        <button mat-fab color="accent" aria-label="Agregar cliente" (click)="openForm(null)">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+    
+    <mia-table #tableComp [config]="tableConfig"></mia-table>
 </div>
-
-<mia-table #tableComp [config]="tableConfig"></mia-table>

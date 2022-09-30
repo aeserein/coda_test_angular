@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --main: #318be6;
+    --main: #ff4081;
 }
 html, body {
     height: 100%;
@@ -9,4 +9,29 @@ html, body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+    margin: auto;
+    position: relative;
+}
+@media screen and (max-width: 9999px) {
+    .container {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 1920px) {
+    .container {
+        width: 78%;
+    }
+}
+@media screen and (max-width: 1366px) {
+    .container {
+        width: 88%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .container {
+        width: calc(100% - 42px);
+    }
 }

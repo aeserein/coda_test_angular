@@ -12,6 +12,8 @@ import { MiaAuthInterceptor, MIA_AUTH_PROVIDER } from '@agencycoda/mia-auth';
 import { environment } from 'src/environments/environment';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MIA_GOOGLE_STORAGE_PROVIDER } from '@agencycoda/mia-core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { MIA_GOOGLE_STORAGE_PROVIDER } from '@agencycoda/mia-core';
 		MiaTableModule,
 		MiaLoadingModule,
 		MiaFormModule,
+		MatButtonModule,
+		MatIconModule
 	],
 	providers: [
 		{

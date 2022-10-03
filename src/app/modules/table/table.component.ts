@@ -26,19 +26,13 @@ export class TableComponent implements OnInit {
 	mfmConfig! : MiaFormModalConfig;
 
 	constructor(public cs : ClientService,
-				protected dialog : MatDialog,
-				private eRef : ElementRef) {
+				protected dialog : MatDialog) {
 	}
 
 	ngOnInit(): void {
 		this.loadConfig();
 		this.formSetup();
 		this.queryScroll.itemPerPage = 1;
-	}
-
-	onClickSave() {
-		console.log("----------------------------------------------------------------------------------");
-		console.log(this.tableEditable.getDataItems());
 	}
 
 	loadConfig() {
@@ -49,7 +43,7 @@ export class TableComponent implements OnInit {
 			{ key: 'lastName', type: 'string', title: 'Apellido', field_key: 'lastname' },
 			{ key: 'email', type: 'string', title: 'Correo', field_key: 'email' },
 			{
-				key: 'more', type: 'more', title: '', extra: {
+				key: 'Opciones', type: 'more', title: '', extra: {
 					actions: [
 						{ icon: 'create', title: 'Edit', key: 'edit' },
 						{ icon: 'delete', title: 'Delete', key: 'delete' },
@@ -58,10 +52,7 @@ export class TableComponent implements OnInit {
 			},
 		];
 
-		let color = this.eRef.nativeElement.style.getProperty('--main');
-		console.log(color);
-		
-		this.tableConfig.loadingColor = 'red';
+		this.tableConfig.loadingColor = "#3f51b5";
 		this.tableConfig.hasEmptyScreen = true;
 		this.tableConfig.emptyScreenTitle = 'No ha ingresado ningún cliente';
 
@@ -100,6 +91,8 @@ export class TableComponent implements OnInit {
 	}
 
 	openForm(client : Client | null) {
+		console.log("en open form");
+		
 		this.mfmConfig.item = client ? client : new Client();
 		return this.dialog.open(MiaFormModalComponent, {
 			width: '520px',

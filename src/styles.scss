@@ -1,7 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-:root {
-    --main: #ff4081;
-}
 html, body {
     height: 100%;
     background-color: white;
@@ -9,6 +6,12 @@ html, body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h4.mat-dialog-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .container {

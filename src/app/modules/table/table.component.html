@@ -1,15 +1,17 @@
+<p>
+    <mat-toolbar color="primary">
+        <span class="container">Mis clientes</span>
+    </mat-toolbar>
+</p>
+
 <div class="container">
-    <header>
-        <h1>Mis clientes</h1>
-    </header>
     
     <div id="buttonsWrapper">
-    
         <mia-edit-columns [config]="tableConfig" [miaTable]="tableComp">
-            <button>Edit Columns</button>
+            <button mat-raised-button color="primary">Edit Columns</button>
         </mia-edit-columns>
     
-        <button mat-fab color="accent" aria-label="Agregar cliente" (click)="openForm(null)">
+        <button mat-fab color="primary" aria-label="Agregar cliente" (click)="openForm(null)">
             <mat-icon>add</mat-icon>
         </button>
     </div>

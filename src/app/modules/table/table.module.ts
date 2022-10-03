@@ -14,7 +14,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MIA_GOOGLE_STORAGE_PROVIDER } from '@agencycoda/mia-core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-
+import { MatToolbarModule } from '@angular/material/toolbar'; 
 
 @NgModule({
 	declarations: [
@@ -29,7 +29,8 @@ import { MatIconModule } from '@angular/material/icon';
 		MiaLoadingModule,
 		MiaFormModule,
 		MatButtonModule,
-		MatIconModule
+		MatIconModule,
+		MatToolbarModule
 	],
 	providers: [
 		{

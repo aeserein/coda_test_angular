@@ -91,8 +91,6 @@ export class TableComponent implements OnInit {
 	}
 
 	openForm(client : Client | null) {
-		console.log("en open form");
-		
 		this.mfmConfig.item = client ? client : new Client();
 		return this.dialog.open(MiaFormModalComponent, {
 			width: '520px',
